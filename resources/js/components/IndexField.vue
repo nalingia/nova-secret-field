@@ -20,7 +20,7 @@ export default {
                 : this.field.value;
         },
         hasValue: function () {
-            return this.field.value !== null;
+            return this.field.value !== null && this.field.value !== '';
         }
     },
     data: function () {

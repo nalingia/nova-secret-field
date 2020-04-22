@@ -48,7 +48,6 @@ export default {
     methods: {
         handleInputChange(event) {
             this.value = event.target.value;
-            console.log(event.target.value);
         },
 
         /**

@@ -1,7 +1,7 @@
 <template>
     <panel-item :field="field">
         <template slot="value">
-            <div class="w-full flex justify-between items-center flex-row">
+            <div class="w-full flex justify-between items-center flex-row" v-if="hasValue">
                 <p class="text-90">{{ value }}</p>
                 <button type="button" class="hover:opacity-75" @mousedown="handleMouseDown" @mouseup="handleMouseUp">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
@@ -9,6 +9,7 @@
                     </svg>
                 </button>
             </div>
+            <p v-else>&mdash;</p>
         </template>
     </panel-item>
 </template>
@@ -21,6 +22,9 @@ export default {
             return this.masked
                 ? this.field.value.replace(/./g, '•')
                 : this.field.value;
+        },
+        hasValue: function () {
+            return this.field.value !== null && this.field.value !== '';
         }
     },
     data: function () {
