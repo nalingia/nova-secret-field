@@ -5,6 +5,7 @@
                 <input
                     :id="field.name"
                     :type="inputType"
+                    :dusk="field.attribute"
                     class="w-full form-control form-input form-input-bordered mr-3"
                     :class="errorClasses"
                     :placeholder="field.name"
