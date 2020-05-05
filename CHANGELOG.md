@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.1.0 - 2020-05-05
+
+- Add copy to clipboard feature
+
 ## 1.0.5 - 2020-05-05
 
 - Fix readonly behaviour

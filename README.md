@@ -24,3 +24,21 @@ public function fields()
     ];
 }
 ```
+
+## Customise
+
+The field ships with a copy-to-clipboard feature. By default, this feature is disabled but if you want to enable it, use `canCopyToClipboard` method on your instance.
+
+```php
+use Nalingia\NovaSecretField\NovaSecretField;
+
+//...
+
+public function fields()
+{
+    return [
+        NovaSecretField::make('Name')
+            ->canCopyToClipboard(),
+    ];
+}
+```
